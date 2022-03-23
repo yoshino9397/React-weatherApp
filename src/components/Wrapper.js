@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import SearchBox from './SearchBox';
-import Geolocation from './Geolocation';
-import WeatherDisplay from './WeatherDisplay';
+import SearchBox from "./SearchBox";
+import Geolocation from "./Geolocation";
+import WeatherDisplay from "./WeatherDisplay";
 
-import StyledWrapper from './styles/StyledWrapper';
+import StyledWrapper from "./styles/StyledWrapper";
 
 const Wrapper = ({ handleInput, handleSubmit, states }) => (
   <StyledWrapper>
