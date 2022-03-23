@@ -2,7 +2,7 @@ const MAPBOX_BASE = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
 const WEATHER_BASE = 'https://api.openweathermap.org/data/2.5/onecall';
 
 const getGeocode = async (location) => {
-  const URL = `${MAPBOX_BASE}${location}.json?types=place&access_token=${process.env.REACT_APP_MAP_TOKEN}`;
+  const URL = `${MAPBOX_BASE}${location}.json?types=place&access_token=${process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}`;
 
   const geocodeList = await fetch(URL)
     .then(data => data.json())
@@ -29,7 +29,7 @@ export const getWeather = async (location) => {
   }
 
 
-  const URL = `${WEATHER_BASE}?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&appid=${process.env.REACT_APP_OW_API_KEY}`;
+  const URL = `${WEATHER_BASE}?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=metric&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`;
 
   const weatherResult = await fetch(URL).then(data => data.json()).then(result => result);
 
