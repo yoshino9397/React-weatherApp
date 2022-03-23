@@ -1,13 +1,31 @@
 import React, { useState, useEffect } from "react";
-
 import Wrapper from "./Wrapper";
-
 import { getWeather } from "../utils/fetchHelpers";
+import styled from 'styled-components';
+import blue from '../assets/blue.jpg';
+import green from '../assets/green.jpg';
+import orange from '../assets/orange.jpg';
 
-import StyledWeather from "./styles/StyledWeather";
+const StyledWeather = styled.div`
+  background-image: url(
+    ${props => {
+    if (props.bgImage === 'blue') {
+      return blue;
+    }
+    if (props.bgImage === 'green') {
+      return green;
+    }
+    if (props.bgImage === 'orange') {
+      return orange;
+    }
+  }}
+  );
+  background-size: cover;
+  background-position: top center;
+`
 
 const Weather = () => {
-  const [inputLocation, setInputLocation] = useState("Embu");
+  const [inputLocation, setInputLocation] = useState("Canada");
   const [currentDate, setCurrentDate] = useState("");
   const [location, setLocation] = useState({
     city: "",
@@ -22,7 +40,7 @@ const Weather = () => {
   });
 
   useEffect(() => {
-    fetchData("São Paulo").then(([newWeather, placeName]) => {
+    fetchData("Vancouver").then(([newWeather, placeName]) => {
       setWeather(newWeather);
       setLocation(placeName);
     });
