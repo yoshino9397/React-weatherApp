@@ -4,7 +4,6 @@
 
 A Weather App made with React :cloud:
 
-<img src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/weather-geocoding/weather.gif" width="400" alt="App Demonstration"/>
 
 </div>
 
@@ -25,15 +24,6 @@ The forecasting is made using 2 different APIs:
 - Get Weather Forecast from any city;
 - The Background Image changes by current user dateTime;
 
-<div align="center">
-
-<img width="200" src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/weather-geocoding/blue.png"/>
- 
-<img width="200" src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/weather-geocoding/green.png"/>
-
-<img width="200" src="https://raw.githubusercontent.com/Zurkon/repo-assets/main/weather-geocoding/orange.png"/>
-
-</div>
 
 # DEMO
 - Here>>>>>> https://yoshino-react-weather-app.netlify.app/
