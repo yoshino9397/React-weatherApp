@@ -1,8 +1,8 @@
 <div align="center">
 
-# Weather Geocoding
+# Weather App:cloud
 
-A Weather App made with React :cloud:
+made with React
 
 
 </div>
