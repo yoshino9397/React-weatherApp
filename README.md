@@ -1,6 +1,6 @@
 <div align="center">
 
-# Weather App:cloud
+# Weather App ☁️
 
 made with React
 
