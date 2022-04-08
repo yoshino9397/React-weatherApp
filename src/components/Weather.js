@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "./Wrapper";
-import { getWeather } from "../utils/fetchHelpers";
+import { getWeather } from "../fetchHelpers";
 import styled from 'styled-components';
-import blue from '../assets/blue.jpg';
-import green from '../assets/green.jpg';
-import orange from '../assets/orange.jpg';
+import blue from '../assets/night.jpg';
+import green from '../assets/day.jpg';
+import orange from '../assets/sea.jpg';
 
 const StyledWeather = styled.div`
   background-image: url(

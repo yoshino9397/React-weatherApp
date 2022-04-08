@@ -27,7 +27,7 @@ const StyledSearchBox = styled.div`
   }
 `;
 
-const SearchBox = ({ handleInput, handleSubmit }) => (
+const Search = ({ handleInput, handleSubmit }) => (
   <StyledSearchBox>
     <form
       onSubmit={(e) => {
@@ -46,4 +46,4 @@ const SearchBox = ({ handleInput, handleSubmit }) => (
   </StyledSearchBox>
 );
 
-export default SearchBox;
+export default Search;

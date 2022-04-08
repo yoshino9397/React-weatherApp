@@ -16,14 +16,14 @@ const StyledGeolocation = styled.div`
   }
 `;
 
-const Geolocation = ({ location, currentDate }) => (
+const Location = ({ location, currentDate }) => (
   <StyledGeolocation>
     <h1> {location.city} </h1>
     <h1>
-      {location.state}, {location.country}{" "}
+      {location.state}, {location.country}
     </h1>
     <h3> {currentDate} </h3>
   </StyledGeolocation>
 );
 
-export default Geolocation;
+export default Location;
