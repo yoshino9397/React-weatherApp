@@ -2,9 +2,6 @@
 
 # Weather App ☁️
 
-made with React
-
-
 </div>
 
 # Description
