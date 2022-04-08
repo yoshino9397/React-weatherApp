@@ -1,7 +1,7 @@
 import React from "react";
 
-import SearchBox from "./SearchBox";
-import Geolocation from "./Geolocation";
+import Search from "./Search";
+import Location from "./Location";
 import WeatherDisplay from "./WeatherDisplay";
 
 import styled from 'styled-components';
@@ -17,8 +17,8 @@ const StyledWrapper = styled.div`
 `
 const Wrapper = ({ handleInput, handleSubmit, states }) => (
   <StyledWrapper>
-    <SearchBox handleInput={handleInput} handleSubmit={handleSubmit} />
-    <Geolocation location={states.location} currentDate={states.currentDate} />
+    <Search handleInput={handleInput} handleSubmit={handleSubmit} />
+    <Location location={states.location} currentDate={states.currentDate} />
     <WeatherDisplay weather={states.weather} />
   </StyledWrapper>
 );
