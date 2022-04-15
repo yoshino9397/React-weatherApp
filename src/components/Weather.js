@@ -1,28 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Wrapper from "./Wrapper";
 import { getWeather } from "../fetchHelpers";
-import styled from 'styled-components';
-import blue from '../assets/night.jpg';
-import green from '../assets/day.jpg';
-import orange from '../assets/sea.jpg';
+import styled from "styled-components";
+import blue from "../assets/night.jpg";
+import green from "../assets/day.jpg";
+import orange from "../assets/sea.jpg";
 
 const StyledWeather = styled.div`
-  background-image: url(
-    ${props => {
-    if (props.bgImage === 'blue') {
+  background-image: url(${(props) => {
+    if (props.bgImage === "blue") {
       return blue;
     }
-    if (props.bgImage === 'green') {
+    if (props.bgImage === "green") {
       return green;
     }
-    if (props.bgImage === 'orange') {
+    if (props.bgImage === "orange") {
       return orange;
     }
-  }}
-  );
+  }});
   background-size: cover;
   background-position: top center;
-`
+`;
 
 const Weather = () => {
   const [inputLocation, setInputLocation] = useState("Canada");
@@ -44,7 +42,7 @@ const Weather = () => {
       setWeather(newWeather);
       setLocation(placeName);
     });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function fetchData(newLocation) {
@@ -90,13 +88,13 @@ const Weather = () => {
       "Friday",
       "Saturday",
     ];
-
+    const hour = d.getHours();
+    const minutes = d.getMinutes();
     const day = days[d.getDay()];
     const date = d.getDate();
     const month = months[d.getMonth()];
-    const year = d.getFullYear();
 
-    return `${day} ${date} ${month} ${year}`;
+    return `${month}, ${date} ${day}  ${hour}:${minutes}  `;
   };
 
   const handleInputLocation = (e) => {
